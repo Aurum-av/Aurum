@@ -1,0 +1,271 @@
+/* --- Variables de Color (La Paleta de Lujo) --- */
+:root {
+    --bg-dark: #0a0a0a;      /* Negro casi puro */
+    --bg-card: #141414;      /* Gris muy oscuro para tarjetas */
+    --gold-primary: #D4AF37; /* Dorado metálico */
+    --gold-hover: #F2C94C;   /* Dorado más brillante para hover */
+    --text-light: #ffffff;
+    --text-muted: #b3b3b3;
+}
+
+/* Reset y Fuentes Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif; /* Fuente para texto normal */
+}
+
+/* Clases para Títulos Elegantes */
+.titulo-elegante {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Barra de Navegación */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95); /* Fondo oscuro semi-transparente */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px; /* Ajusta el tamaño del diamante aquí */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--gold-primary);
+}
+
+.carrito-icono i {
+    color: var(--gold-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Portada Hero (Más dramática) */
+.hero {
+    height: 85vh;
+    /* Foto de fondo oscura y elegante */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Botones Dorados */
+.btn-gold {
+    background-color: transparent;
+    color: var(--gold-primary);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    border: 2px solid var(--gold-primary);
+    transition: all 0.4s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Sección Manifiesto */
+.brand-statement {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--bg-dark);
+}
+
+.brand-statement h2 {
+    color: var(--gold-primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.brand-statement p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.diamante-divider i {
+    color: var(--gold-primary);
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+/* Sección Productos */
+.seccion-productos {
+    padding: 80px 20px;
+    background-color: #0f0f0f; /* Ligeramente diferente al fondo principal */
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.contenedor-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Tarjetas de Lujo */
+.tarjeta-lujo {
+    background: var(--bg-card);
+    width: 300px;
+    transition: all 0.4s ease;
+    border: 1px solid transparent; /* Borde invisible inicial */
+}
+
+.tarjeta-lujo:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold-primary); /* Borde dorado al pasar el mouse */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 320px; /* Más altas para más elegancia */
+    object-fit: cover;
+    filter: grayscale(30%); /* Un toque desaturado inicial */
+    transition: filter 0.4s;
+}
+
+.tarjeta-lujo:hover .imagen-producto img {
+    filter: grayscale(0%); /* Color completo al pasar el mouse */
+}
+
+.info-producto {
+    padding: 25px;
+    text-align: center;
+}
+
+.info-producto h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: var(--gold-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.descripcion {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.btn-comprar-lujo {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border: 1px solid var(--text-muted);
+    transition: all 0.3s;
+}
+
+.btn-comprar-lujo:hover {
+    background-color: var(--gold-primary);
+    border-color: var(--gold-primary);
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.logo-container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.logo-img-small {
+    height: 25px;
+    width: auto;
+}
+footer p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
